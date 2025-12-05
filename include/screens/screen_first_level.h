@@ -8,6 +8,8 @@ typedef struct{
   char forward;
   char backward;
 } playerInput;
+
+
 typedef struct {
   Camera3D camera;
 } FirstLevelData;
@@ -16,4 +18,11 @@ void InitFirstLevelScreen(struct Systems* systems, FirstLevelData* data);
 void UpdateFirstLevelScreen(struct Systems* systems, FirstLevelData* data);
 void DrawFirstLevelScreen(struct Systems* systems, FirstLevelData* data);
 void DestroyFirstLevelScreen(struct Systems* systems, FirstLevelData* data);
+
+
+void InitSecondLevelScreen(struct Systems* systems, FirstLevelData* data);
+void UpdateSecondLevelScreen(struct Systems* systems, FirstLevelData* data);
+void DrawSecondLevelScreen(struct Systems* systems, FirstLevelData* data);
+void DestroySecondLevelScreen(struct Systems* systems, FirstLevelData* data);
+
 #endif

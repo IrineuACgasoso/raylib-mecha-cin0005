@@ -136,6 +136,18 @@ void UpdateFirstLevelScreen(struct Systems* systems, FirstLevelData* data)
   }
 
   ProcessGameEvents(systems);
+
+  EntityManager* em = &systems->entityManager;
+  bool enemyAlive = false;
+  for (int i = 0; i < em->numEntities; i++) {
+      if (em->componentMasks[i] & COMPONENT_AI_CONTROL) {
+          enemyAlive = true;
+          break;
+      }
+  }
+  if (!enemyAlive) {
+      RequestScreenChange(systems, SCREEN_SECOND_LEVEL); // Nivel 2
+  }
 }
 
 void DrawFirstLevelScreen(struct Systems* systems, FirstLevelData* data)

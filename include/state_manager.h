@@ -10,7 +10,6 @@ struct Systems;
 #include "screens/screen_options.h"
 #include "screens/screen_credits.h"
 #include "screens/screen_first_level.h"
-#include "screens/screen_second_level.h"
 
 
 // Enum for all Game States
@@ -36,7 +35,6 @@ typedef union {
     OptionsData options;
     CreditsData credits;
     FirstLevelData firstLevel;
-    SecondLevelData secondLevel;
 } ScreenData;
 
 // The state manager hold the union to the screen data, the current state and the next state for switches

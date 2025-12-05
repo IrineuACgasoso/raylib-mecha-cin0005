@@ -21,7 +21,7 @@ void InitResourceManager(ResourceManager* resourceManager) {
   resourceManager->models[MODEL_ID_MENU] = LoadModel("resources/models/player/mechafullmenu.obj");
   resourceManager->models[MODEL_ID_ENEMY_SCOUT] = LoadModel("resources/models/enemies/scout.glb");
   resourceManager->models[MODEL_ID_ENEMY_SCOUT].transform = MatrixMultiply(
-    MatrixScale(0.5f, 0.5f, 0.5f), 
+    MatrixScale(0.7f, 0.7f, 0.7f), 
     MatrixRotateY(PI)
   );
 
@@ -31,7 +31,7 @@ void InitResourceManager(ResourceManager* resourceManager) {
 
   //Projectiles
   //Pulse Laser 
-  Mesh pulseLaserGunProjectileMesh = GenMeshCube(0.025f, 0.025f, 3.0f);
+  Mesh pulseLaserGunProjectileMesh = GenMeshCube(0.050f, 0.050f, 3.0f);
   resourceManager->models[MODEL_ID_PROJECTILE_PULSE_LASER] = LoadModelFromMesh(pulseLaserGunProjectileMesh);
   // Lighting up
   resourceManager->models[MODEL_ID_PROJECTILE_PULSE_LASER].materials[0].maps[MATERIAL_MAP_DIFFUSE].color = WHITE;

@@ -2,9 +2,9 @@
 #include "ecs/entitymanager.h"
 #include <raymath.h>
 
-#define AI_TURN_SPEED      1.5f  
-#define AI_MOVE_SPEED      12.5f 
-#define AI_FOV_THRESHOLD   0.4f
+#define AI_TURN_SPEED      2.5f  
+#define AI_MOVE_SPEED      18.0f 
+#define AI_FOV_THRESHOLD   0.3f
 #define AI_AIM_ERROR       0.1
 
 static void AiMovementControl(TransformComponent* trans, PhysicsComponent* phys, Vector3 targetPos, float speed, float dt);
